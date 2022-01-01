@@ -112,7 +112,7 @@ body {font-family: "Lato", sans-serif}
 
  <a href="book.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ONLINE BOOKING</a>
  </div>
-
+	<link rel="stylesheet" href="style.css">
 
  <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -276,20 +276,39 @@ Airbrushed by @martin_ojiambo</p>
  <div class="container">
         <h2>Contact Us</h2>
         <form method="POST" name="contact" data-netlify="true">
-            
+          <script type="text/javascript">
+function ValidateForm(frm) {
+  if (frm.Firstname.value == "") { alert('Firstname' is required.'); frm.Firstname.focus(); return false; }
+if (frm.Lastname.value == "") { alert('Lastname' is required.'); frm.Lastname.focus(); return false; }
+if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+if (frm.message.value == "") { alert('Please enter comments or questions.'); frm.message.focus(); return false; }
+return true; }
+</script>
+<table>
+          <tr> <td>  
           <label for="firstname">First Name</label>
+          </td> <td>
           <input type="text" id="firstname" name="Firstname"
             placeholder="Your name.." required>
+            </td> </tr> <tr> <td>
           <label for="lastname">Last Name</label>
+          </td> <td>
           <input type="text" id="lastname" name="Lastname" 
             placeholder="Your last name.." required>
+               </td> </tr> <tr> <td>
           <label for="email">Email</label>
+       </td> <td>
           <input type="email" id="email" name="Email"     
             placeholder="Your email address.." required>
+               </td> </tr> <tr> <td>
           <label for="message">Message</label> 
+             </td> <td>
           <textarea id="message" name="Subject" 
             placeholder="Write something.." required></textarea>
+             </td> </tr> <tr> <td>
           <button type="submit"> Submit </button>
+          </table>
         </form>
       </div>
 </div>		
